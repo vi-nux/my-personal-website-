@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>គណនី - Chara Shop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Khmer OS Battambang', sans-serif, Arial;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .top-bar {
+            background-color: #fce4ec;
+            font-size: 13px;
+            padding: 8px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #d81b60;
+        }
+        header {
+            background-color: #fff;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d81b60;
+            text-decoration: none;
+        }
+        .search-bar {
+            display: flex;
+            width: 40%;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 8px 15px;
+            border: none;
+            outline: none;
+            font-family: 'Khmer OS Battambang', sans-serif;
+        }
+        .search-bar button {
+            background-color: #d81b60;
+            color: white;
+            border: none;
+            padding: 0 20px;
+            cursor: pointer;
+        }
+        .user-actions a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        nav {
+            background-color: #fff;
+            padding: 10px 40px;
+            display: flex;
+            gap: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-size: 15px;
+        }
+        nav a.active {
+            color: #d81b60;
+            font-weight: bold;
+        }
+        .container {
+            padding: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #880e4f;
+        }
+        .account-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        .info-row {
+            display: flex;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+        .info-label {
+            width: 160px;
+            font-weight: bold;
+            color: #555;
+        }
+        .btn {
+            background-color: #d81b60;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Khmer OS Battambang', sans-serif;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        .btn:hover {
+            background-color: #ad1457;
+        }
+        footer {
+            background-color: #212121;
+            color: #fff;
+            padding: 40px;
+            margin-top: 40px;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <span>🚚 ដឹកជញ្ជូនឥតគិតថ្លៃ | ទូទាត់ពេលទទួលបានទំនិញ (COD) | សេវាអតិថិជន 24/7</span>
+        <span>📞 012 345 678</span>
+    </div>
+
+    <header>
+        <a href="index.html" class="logo">Chara Shop</a>
+        <div class="search-bar">
+            <input type="text" placeholder="ស្វែងរកទំនិញ...">
+            <button>🔍</button>
+        </div>
+        <div class="user-actions">
+            <a href="user.html" style="color: #d81b60; font-weight: bold;">👤 គណនី</a>
+            <a href="wishlist.html">❤️ ចំណូលចិត្ត</a>
+            <a href="cart.html">🛒 កន្ត្រកទំនិញ</a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">ទំព័រដើម</a>
+        <a href="category.html">ប្រភេទទំនិញ</a>
+        <a href="new-products.html">ទំនិញថ្មី</a>
+        <a href="discount.html">ការបញ្ចុះតម្លៃ</a>
+        <a href="about.html">អំពីយើង</a>
+        <a href="contact.html">ទំនាក់ទំនង</a>
+    </nav>
+
+    <div class="container">
+        <div class="account-card">
+            <div class="section-title">ព័ត៌មានគណនីផ្ទាល់ខ្លួន</div>
+            <div class="info-row">
+                <div class="info-label">ឈ្មោះពេញ៖</div>
+                <div>យ៉ុន វិចិ្ចរ៉ា (Yorn Vichra)</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">លេខទូរសព្ទ៖</div>
+                <div>012 345 678</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">អ៊ីមែល៖</div>
+                <div>vichra@charashop.com</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">អាសយដ្ឋានដឹកជញ្ជូន៖</div>
+                <div>រាជធានីភ្នំពេញ, កម្ពុជា</div>
+            </div>
+            <a href="#" class="btn">កែសម្រួលព័ត៌មាន</a>
+        </div>
+
+        <div class="account-card">
+            <div class="section-title">ប្រវត្តិការបញ្ជាទិញ</div>
+            <p style="color: #666; font-size: 15px;">មិនទាន់មានប្រវត្តិការបញ្ជាទិញទំនិញនៅឡើយទេ។</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Chara Shop © 2026 - រក្សាសិទ្ធិគ្រប់យ៉ាង</p>
+    </footer>
+
+</body>
+</html>

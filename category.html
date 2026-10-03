@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ប្រភេទទំនិញ - Chara Shop</title>
+    <style>
+        * {
+           * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Khmer OS Battambang', sans-serif, Arial;
+}
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .top-bar {
+            background-color: #fce4ec;
+            font-size: 13px;
+            padding: 8px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #d81b60;
+        }
+        header {
+            background-color: #fff;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d81b60;
+            text-decoration: none;
+        }
+        nav {
+            background-color: #fff;
+            padding: 10px 40px;
+            display: flex;
+            gap: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-size: 15px;
+        }
+        nav a.active {
+            color: #d81b60;
+            font-weight: bold;
+        }
+        .container {
+            padding: 40px;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            color: #333;
+        }
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        .category-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eee;
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(216, 27, 96, 0.15);
+            border-color: #d81b60;
+        }
+        .category-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        .category-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #880e4f;
+        }
+        footer {
+            background-color: #212121;
+            color: #fff;
+            padding: 30px 40px;
+            margin-top: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <span>🚚 ដឹកជញ្ជូនឥតគិតថ្លៃ | ទូទាត់ពេលទទួលបានទំនិញ (COD)</span>
+        <span>📞 012 345 678</span>
+    </div>
+
+    <header>
+        <a href="index.html" class="logo">Chara Shop</a>
+    </header>
+
+    <nav>
+        <a href="index.html">ទំព័រដើម</a>
+        <a href="category.html" class="active">ប្រភេទទំនិញ</a>
+        <a href="#" onclick="alert('ទំព័រកំពុងអភិវឌ្ឍន៍')">ទំនិញថ្មី</a>
+        <a href="#" onclick="alert('ទំព័រកំពុងអភិវឌ្ឍន៍')">ការបញ្ចុះតម្លៃ</a>
+        <a href="#" onclick="alert('ទំព័រកំពុងអភិវឌ្ឍន៍')">អំពីយើង</a>
+        <a href="#" onclick="alert('ទំព័រកំពុងអភិវឌ្ឍន៍')">ទំនាក់ទំនង</a>
+    </nav>
+
+    <div class="container">
+        <div class="section-title">📂 ប្រភេទទំនិញទាំងអស់</div>
+        <div class="category-grid">
+            <div class="category-card" onclick="alert('ចូលកាន់ប្រភេទ៖ គ្រឿងអេឡិចត្រូនិច')">
+                <div class="category-icon">💻</div>
+                <div class="category-name">គ្រឿងអេឡិចត្រូនិច</div>
+            </div>
+            <div class="category-card" onclick="alert('ចូលកាន់ប្រភេទ៖ ខោអាវបុរស​ នារី')">
+                <div class="category-icon">👕</div>
+                <div class="category-name">ខោអាវបុរស​ នារី</div>
+            </div>
+            <div class="category-card" onclick="alert('ចូលកាន់ប្រភេទ៖ គ្រឿងសម្អាង')">
+                <div class="category-icon">💄</div>
+                <div class="category-name">គ្រឿងសម្អាង</div>
+            </div>
+            <div class="category-card" onclick="alert('ចូលកាន់ប្រភេទ៖ សម្ភារៈផ្ទះបាយ​ និងគ្រឿងលម្អផ្ទះ')">
+                <div class="category-icon">🍳</div>
+                <div class="category-name">សម្ភារៈផ្ទះបាយ​ និងគ្រឿងលម្អផ្ទះ</div>
+            </div>
+            <div class="category-card" onclick="alert('ចូលកាន់ប្រភេទ៖ អាហារសម្រន់ និង​ភេជ្ជៈ')">
+                <div class="category-icon">👟</div>
+                <div class="category-name">អាហារសម្រន់ និង​ភេជ្ជៈ</div>
+            </div>
+            <div class="category-card" onclick="alert('ចូលកាន់ប្រភេទ៖ កាបូប')">
+                <div class="category-icon">👜</div>
+                <div class="category-name">រក្សាសិទ្ធិ</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Chara Shop © 2026 - រក្សាសិទ្ធិគ្រប់យ៉ាង</p>
+    </footer>
+
+</body>
+</html>

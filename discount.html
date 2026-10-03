@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chara Shop - Online Store</title>
+    <title>ការបញ្ចុះតម្លៃ - Chara Shop</title>
     <style>
         * {
-           * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Khmer OS Battambang', sans-serif, Arial;
-}
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Khmer OS Battambang', sans-serif, Arial;
         }
         body {
             background-color: #f9f9f9;
@@ -52,6 +50,7 @@
             padding: 8px 15px;
             border: none;
             outline: none;
+            font-family: 'Khmer OS Battambang', sans-serif;
         }
         .search-bar button {
             background-color: #d81b60;
@@ -82,41 +81,13 @@
             color: #d81b60;
             font-weight: bold;
         }
-        .banner {
-            margin: 20px 40px;
-            background: linear-gradient(135deg, #fce4ec, #f8bbd0);
-            border-radius: 10px;
-            padding: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .banner-text h1 {
-            font-size: 32px;
-            color: #880e4f;
-            margin-bottom: 10px;
-        }
-        .banner-text p {
-            color: #ad1457;
-            margin-bottom: 20px;
-        }
-        .btn {
-            background-color: #d81b60;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
         .container {
-            padding: 20px 40px;
+            padding: 40px;
         }
         .section-title {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             color: #333;
         }
         .product-grid {
@@ -130,6 +101,18 @@
             padding: 15px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             text-align: center;
+            position: relative;
+        }
+        .discount-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #d81b60;
+            color: white;
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: bold;
         }
         .product-img {
             width: 100%;
@@ -147,10 +130,20 @@
             font-weight: bold;
             margin-bottom: 5px;
         }
+        .price-box {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
         .product-price {
             color: #d81b60;
             font-weight: bold;
-            margin-bottom: 10px;
+        }
+        .old-price {
+            color: #999;
+            text-decoration: line-through;
+            font-size: 13px;
         }
         .buy-btn {
             background-color: #d81b60;
@@ -174,10 +167,6 @@
             margin-top: 40px;
             font-size: 14px;
         }
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-        }
     </style>
 </head>
 <body>
@@ -190,8 +179,8 @@
     <header>
         <a href="index.html" class="logo">Chara Shop</a>
         <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="ស្វែងរកផលិតផល...">
-            <button onclick="searchProduct()">🔍</button>
+            <input type="text" placeholder="ស្វែងរកទំនិញបញ្ចុះតម្លៃ...">
+            <button>🔍</button>
         </div>
         <div class="user-actions">
             <a href="cart.html">👤 គណនី</a>
@@ -201,81 +190,73 @@
     </header>
 
     <nav>
-        <a href="index.html" class="active">ទំព័រដើម</a>
+        <a href="index.html">ទំព័រដើម</a>
         <a href="category.html">ប្រភេទទំនិញ</a>
         <a href="new-products.html">ទំនិញថ្មី</a>
-        <a href="discount.html">ការបញ្ចុះតម្លៃ</a>
+        <a href="discount.html" class="active">ការបញ្ចុះតម្លៃ</a>
         <a href="about.html">អំពីយើង</a>
         <a href="contact.html">ទំនាក់ទំនង</a>
     </nav>
 
-    <div class="banner">
-        <div class="banner-text">
-            <h1>ទំនិញគ្រប់ប្រភេទ</h1>
-            <p>គុណភាពល្អ | តម្លៃសមរម្យ | ដឹកជញ្ជូនលឿន</p>
-            <a href="category.html" class="btn">ទិញឥឡូវនេះ →</a>
-        </div>
-    </div>
-
     <div class="container">
-        <div class="section-title">🔥 ទំនិញពេញនិយម</div>
+        <div class="section-title">🔥 ទំនិញបញ្ចុះតម្លៃពិសេសប្រចាំសប្តាហ៍</div>
         <div class="product-grid">
             <div class="product-card">
-                <div class="product-img">Image</div>
-                <div class="product-name">Hoodie Oversize</div>
-                <div class="product-price">$12.00</div>
+                <div class="discount-badge">-20%</div>
+                <div class="product-img">Sale Item</div>
+                <div class="product-name">Casual T-Shirt</div>
+                <div class="price-box">
+                    <span class="product-price">$12.00</span>
+                    <span class="old-price">$15.00</span>
+                </div>
                 <a href="cart.html" class="buy-btn">បញ្ជាទិញ</a>
             </div>
             <div class="product-card">
-                <div class="product-img">Image</div>
+                <div class="discount-badge">-30%</div>
+                <div class="product-img">Sale Item</div>
                 <div class="product-name">Sport Shoes</div>
-                <div class="product-price">$25.50</div>
+                <div class="price-box">
+                    <span class="product-price">$21.00</span>
+                    <span class="old-price">$30.00</span>
+                </div>
                 <a href="cart.html" class="buy-btn">បញ្ជាទិញ</a>
             </div>
             <div class="product-card">
-                <div class="product-img">Image</div>
-                <div class="product-name">Handbag</div>
-                <div class="product-price">$18.00</div>
-                <a href="cart.html" class="buy-btn">បញ្ជាទិញ</a>
-            </div>
-            <div class="product-card">
-                <div class="product-img">Image</div>
-                <div class="product-name">Perfume</div>
-                <div class="product-price">$15.00</div>
-                <a href="cart.html" class="buy-btn">បញ្ជាទិញ</a>
-            </div>
-            <div class="product-card">
-                <div class="product-img">Image</div>
+                <div class="discount-badge">-15%</div>
+                <div class="product-img">Sale Item</div>
                 <div class="product-name">Smart Watch</div>
-                <div class="product-price">$35.20</div>
+                <div class="price-box">
+                    <span class="product-price">$34.00</span>
+                    <span class="old-price">$40.00</span>
+                </div>
+                <a href="cart.html" class="buy-btn">បញ្ជាទិញ</a>
+            </div>
+            <div class="product-card">
+                <div class="discount-badge">-25%</div>
+                <div class="product-img">Sale Item</div>
+                <div class="product-name">Leather Wallet</div>
+                <div class="price-box">
+                    <span class="product-price">$11.25</span>
+                    <span class="old-price">$15.00</span>
+                </div>
+                <a href="cart.html" class="buy-btn">បញ្ជាទិញ</a>
+            </div>
+            <div class="product-card">
+                <div class="discount-badge">-50%</div>
+                <div class="product-img">Sale Item</div>
+                <div class="product-name">Sun Glasses</div>
+                <div class="price-box">
+                    <span class="product-price">$7.50</span>
+                    <span class="old-price">$15.00</span>
+                </div>
                 <a href="cart.html" class="buy-btn">បញ្ជាទិញ</a>
             </div>
         </div>
     </div>
 
     <footer>
-        <div class="footer-content">
-            <div>
-                <h3>Chara Shop</h3>
-                <p>ហាងទិញទំនិញអនឡាញដ៏គួរឱ្យទុកចិត្តរបស់អ្នក</p>
-            </div>
-            <div>
-                <p>📍 ភ្នំពេញ, កម្ពុជា</p>
-                <p>📧 support@charashop.com</p>
-                <p>📞 012 345 678</p>
-            </div>
-        </div>
+        <p>Chara Shop © 2026 - រក្សាសិទ្ធិគ្រប់យ៉ាង</p>
     </footer>
 
-    <script>
-        function searchProduct() {
-            let keyword = document.getElementById('searchInput').value;
-            if (keyword.trim() !== "") {
-                alert("កំពុងស្វែងរកទំនិញ៖ " + keyword);
-            } else {
-                alert("សូមបញ្ចូលឈ្មោះទំនិញដែលចង់ស្វែងរក!");
-            }
-        }
-    </script>
 </body>
 </html>

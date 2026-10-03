@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>កន្ត្រកទំនិញ - Chara Shop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Khmer OS Battambang', sans-serif, Arial;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .top-bar {
+            background-color: #fce4ec;
+            font-size: 13px;
+            padding: 8px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #d81b60;
+        }
+        header {
+            background-color: #fff;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d81b60;
+            text-decoration: none;
+        }
+        .search-bar {
+            display: flex;
+            width: 40%;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 8px 15px;
+            border: none;
+            outline: none;
+            font-family: 'Khmer OS Battambang', sans-serif;
+        }
+        .search-bar button {
+            background-color: #d81b60;
+            color: white;
+            border: none;
+            padding: 0 20px;
+            cursor: pointer;
+        }
+        .user-actions a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        nav {
+            background-color: #fff;
+            padding: 10px 40px;
+            display: flex;
+            gap: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-size: 15px;
+        }
+        nav a.active {
+            color: #d81b60;
+            font-weight: bold;
+        }
+        .container {
+            padding: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #880e4f;
+        }
+        .cart-table {
+            width: 100%;
+            background: #fff;
+            border-radius: 10px;
+            border-collapse: collapse;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .cart-table th, .cart-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+        .cart-table th {
+            background-color: #fce4ec;
+            color: #d81b60;
+            font-weight: bold;
+        }
+        .cart-summary {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-align: right;
+        }
+        .cart-summary p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .cart-summary span {
+            font-weight: bold;
+            color: #d81b60;
+        }
+        .checkout-btn {
+            background-color: #d81b60;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+            font-family: 'Khmer OS Battambang', sans-serif;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .checkout-btn:hover {
+            background-color: #ad1457;
+        }
+        footer {
+            background-color: #212121;
+            color: #fff;
+            padding: 40px;
+            margin-top: 40px;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <span>🚚 ដឹកជញ្ជូនឥតគិតថ្លៃ | ទូទាត់ពេលទទួលបានទំនិញ (COD) | សេវាអតិថិជន 24/7</span>
+        <span>📞 012 345 678</span>
+    </div>
+
+    <header>
+        <a href="index.html" class="logo">Chara Shop</a>
+        <div class="search-bar">
+            <input type="text" placeholder="ស្វែងរកទំនិញក្នុងកន្ត្រក...">
+            <button>🔍</button>
+        </div>
+        <div class="user-actions">
+            <a href="user.html">👤 គណនី</a>
+            <a href="wishlist.html">❤️ ចំណូលចិត្ត</a>
+            <a href="cart.html" style="color: #d81b60; font-weight: bold;">🛒 កន្ត្រកទំនិញ</a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">ទំព័រដើម</a>
+        <a href="category.html">ប្រភេទទំនិញ</a>
+        <a href="new-products.html">ទំនិញថ្មី</a>
+        <a href="discount.html">ការបញ្ចុះតម្លៃ</a>
+        <a href="about.html">អំពីយើង</a>
+        <a href="contact.html">ទំនាក់ទំនង</a>
+    </nav>
+
+    <div class="container">
+        <div class="section-title">🛒 កន្ត្រកទំនិញរបស់អ្នក</div>
+        
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>ទំនិញ</th>
+                    <th>តម្លៃ</th>
+                    <th>ចំនួន</th>
+                    <th>សរុប</th>
+                    <th>សកម្មភាព</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Casual T-Shirt</td>
+                    <td>$12.00</td>
+                    <td><input type="number" value="1" min="1" style="width: 50px; padding: 5px; font-family: 'Khmer OS Battambang', sans-serif;"></td>
+                    <td style="color: #d81b60; font-weight: bold;">$12.00</td>
+                    <td><button style="background: #ff5252; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">លុប</button></td>
+                </tr>
+                <tr>
+                    <td>Sport Shoes</td>
+                    <td>$21.00</td>
+                    <td><input type="number" value="1" min="1" style="width: 50px; padding: 5px; font-family: 'Khmer OS Battambang', sans-serif;"></td>
+                    <td style="color: #d81b60; font-weight: bold;">$21.00</td>
+                    <td><button style="background: #ff5252; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">លុប</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="cart-summary">
+            <p>ទឹកប្រាក់សរុប៖ <span>$33.00</span></p>
+            <a href="#" class="checkout-btn">បន្តការទូទាត់ប្រាក់</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Chara Shop © 2026 - រក្សាសិទ្ធិគ្រប់យ៉ាង</p>
+    </footer>
+
+</body>
+</html>

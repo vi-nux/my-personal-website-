@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ចំណូលចិត្ត - Chara Shop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Khmer OS Battambang', sans-serif, Arial;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .top-bar {
+            background-color: #fce4ec;
+            font-size: 13px;
+            padding: 8px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #d81b60;
+        }
+        header {
+            background-color: #fff;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d81b60;
+            text-decoration: none;
+        }
+        .search-bar {
+            display: flex;
+            width: 40%;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 8px 15px;
+            border: none;
+            outline: none;
+            font-family: 'Khmer OS Battambang', sans-serif;
+        }
+        .search-bar button {
+            background-color: #d81b60;
+            color: white;
+            border: none;
+            padding: 0 20px;
+            cursor: pointer;
+        }
+        .user-actions a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        nav {
+            background-color: #fff;
+            padding: 10px 40px;
+            display: flex;
+            gap: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-size: 15px;
+        }
+        nav a.active {
+            color: #d81b60;
+            font-weight: bold;
+        }
+        .container {
+            padding: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #880e4f;
+        }
+        .wishlist-table {
+            width: 100%;
+            background: #fff;
+            border-radius: 10px;
+            border-collapse: collapse;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .wishlist-table th, .wishlist-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+        .wishlist-table th {
+            background-color: #fce4ec;
+            color: #d81b60;
+            font-weight: bold;
+        }
+        .btn {
+            background-color: #d81b60;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Khmer OS Battambang', sans-serif;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        .btn:hover {
+            background-color: #ad1457;
+        }
+        .btn-danger {
+            background-color: #ff5252;
+        }
+        .btn-danger:hover {
+            background-color: #e53935;
+        }
+        footer {
+            background-color: #212121;
+            color: #fff;
+            padding: 40px;
+            margin-top: 40px;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <span>🚚 ដឹកជញ្ជូនឥតគិតថ្លៃ | ទូទាត់ពេលទទួលបានទំនិញ (COD) | សេវាអតិថិជន 24/7</span>
+        <span>📞 012 345 678</span>
+    </div>
+
+    <header>
+        <a href="index.html" class="logo">Chara Shop</a>
+        <div class="search-bar">
+            <input type="text" placeholder="ស្វែងរកទំនិញ...">
+            <button>🔍</button>
+        </div>
+        <div class="user-actions">
+            <a href="user.html">👤 គណនី</a>
+            <a href="wishlist.html" style="color: #d81b60; font-weight: bold;">❤️ ចំណូលចិត្ត</a>
+            <a href="cart.html">🛒 កន្ត្រកទំនិញ</a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">ទំព័រដើម</a>
+        <a href="category.html">ប្រភេទទំនិញ</a>
+        <a href="new-products.html">ទំនិញថ្មី</a>
+        <a href="discount.html">ការបញ្ចុះតម្លៃ</a>
+        <a href="about.html">អំពីយើង</a>
+        <a href="contact.html">ទំនាក់ទំនង</a>
+    </nav>
+
+    <div class="container">
+        <div class="section-title">❤️ ទំនិញដែលអ្នកដាក់ក្នុងបញ្ជីចំណូលចិត្ត</div>
+        
+        <table class="wishlist-table">
+            <thead>
+                <tr>
+                    <th>ឈ្មោះទំនិញ</th>
+                    <th>តម្លៃ</th>
+                    <th>ស្ថានភាពស្តុក</th>
+                    <th>សកម្មភាព</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Smart Watch Series 5</td>
+                    <td style="color: #d81b60; font-weight: bold;">$45.00</td>
+                    <td style="color: green;">មានក្នុងស្តុក</td>
+                    <td>
+                        <a href="cart.html" class="btn">ទិញ / បញ្ចូលកន្ត្រក</a>
+                        <button class="btn btn-danger">លុប</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Wireless Bluetooth Earbuds</td>
+                    <td style="color: #d81b60; font-weight: bold;">$25.00</td>
+                    <td style="color: green;">មានក្នុងស្តុក</td>
+                    <td>
+                        <a href="cart.html" class="btn">ទិញ / បញ្ចូលកន្ត្រក</a>
+                        <button class="btn btn-danger">លុប</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>Chara Shop © 2026 - រក្សាសិទ្ធិគ្រប់យ៉ាង</p>
+    </footer>
+
+</body>
+</html>
